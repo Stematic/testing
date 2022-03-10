@@ -1,0 +1,37 @@
+{
+    "name": "stematic/testing",
+    "description": "Testing and coding standards package.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.0.2",
+        "laravel-zero/framework": "^9.0",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5",
+        "phpmd/phpmd": "^2.10",
+        "phploc/phploc": "^7.0",
+        "spatie/laravel-ignition": "^1.0.4",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^v7.0.0",
+        "nunomaduro/collision": "^6.1",
+        "nunomaduro/patrol": "^1.1",
+        "nunomaduro/termwind": "^1.3",
+        "stematic/coding-standards": "^1.0"
+    },
+    "require-dev": {
+        "laminas/laminas-servicemanager": "3.11.x-dev",
+        "laminas/laminas-text": "2.10.x-dev",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stematic\\Testing\\": "src/"
+        }
+    },
+    "scripts": {
+        "testing": "./testing"
+    },
+    "bin": ["testing"],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

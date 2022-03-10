@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+define('LARAVEL_START', microtime(true));
+
+// Register the composer autoloader.
+$autoloader = file_exists(__DIR__ . '/vendor/autoload.php')
+    ? __DIR__ . '/vendor/autoload.php'
+    : __DIR__ . '/../../autoload.php';
+
+define('COMPOSER_INSTALL', $autoloader);
+
+require_once COMPOSER_INSTALL;
+
+$application = require __DIR__ . '/bootstrap/app.php';
+
+// Run the Artisan application.
+$kernel = $application->make(Illuminate\Contracts\Console\Kernel::class);
+
+$status = $kernel->handle(
+    $input = new Symfony\Component\Console\Input\ArgvInput(),
+    new Symfony\Component\Console\Output\ConsoleOutput(),
+);
+
+exit($status);
