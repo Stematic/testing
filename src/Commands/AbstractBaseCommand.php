@@ -11,7 +11,7 @@ use Symfony\Component\Process\Process;
 use function func_get_args;
 use function str_repeat;
 use function sprintf;
-use function dirname;
+use function getcwd;
 
 abstract class AbstractBaseCommand extends Command
 {
@@ -64,6 +64,6 @@ abstract class AbstractBaseCommand extends Command
      */
     protected function vendorPath(): string
     {
-        return dirname(__DIR__, 2) . '/vendor';
+        return getcwd() . '/vendor';
     }
 }

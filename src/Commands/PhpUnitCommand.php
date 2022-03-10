@@ -35,6 +35,6 @@ class PhpUnitCommand extends AbstractBaseCommand
         $this->title('PHPUnit: Application Test Suite');
 
         // @todo add code coverage?
-        $this->exec(['./vendor/bin/phpunit']);
+        $this->exec(['./vendor/bin/phpunit', '--coverage-text']);
     }
 }
