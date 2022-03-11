@@ -152,3 +152,84 @@
 #14 /home/pdawson/Projects/stematic/testing/testing(0): {main}()
 #15 {main}
 "} 
+[2022-03-11 16:23:09] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:200)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->resolve()
+#1 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(112): Illuminate\\Log\\LogManager->get()
+#2 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(590): Illuminate\\Log\\LogManager->driver()
+#3 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(249): Illuminate\\Log\\LogManager->error()
+#4 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(367): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#8 {main}
+"} 
+[2022-03-11 16:23:09] laravel.ERROR: Too many arguments, expected arguments "namespace". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"namespace\". at /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php:193)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument()
+#1 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#2 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Command/Command.php(250): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(989): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#6 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#7 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#8 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#9 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#10 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#11 {main}
+"} 
+[2022-03-11 16:23:28] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:200)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->resolve()
+#1 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(112): Illuminate\\Log\\LogManager->get()
+#2 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(590): Illuminate\\Log\\LogManager->driver()
+#3 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(249): Illuminate\\Log\\LogManager->error()
+#4 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(367): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#8 {main}
+"} 
+[2022-03-11 16:23:28] laravel.ERROR: Too many arguments, expected arguments "namespace". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"namespace\". at /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php:193)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument()
+#1 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#2 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Command/Command.php(250): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(989): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#6 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#7 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#8 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#9 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#10 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#11 {main}
+"} 
+[2022-03-11 16:23:56] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:200)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->resolve()
+#1 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(112): Illuminate\\Log\\LogManager->get()
+#2 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(590): Illuminate\\Log\\LogManager->driver()
+#3 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(249): Illuminate\\Log\\LogManager->error()
+#4 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(367): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#8 {main}
+"} 
+[2022-03-11 16:23:56] laravel.ERROR: Too many arguments, expected arguments "namespace". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"namespace\". at /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php:193)
+[stacktrace]
+#0 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument()
+#1 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#2 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Command/Command.php(250): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(989): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#6 /home/pdawson/Projects/stematic/testing/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#7 /home/pdawson/Projects/stematic/testing/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#8 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#9 /home/pdawson/Projects/stematic/testing/vendor/laravel-zero/framework/src/Kernel.php(96): Illuminate\\Foundation\\Console\\Kernel->handle()
+#10 /home/pdawson/Projects/stematic/testing/testing(24): LaravelZero\\Framework\\Kernel->handle()
+#11 {main}
+"} 

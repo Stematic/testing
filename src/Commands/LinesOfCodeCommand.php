@@ -27,6 +27,6 @@ class LinesOfCodeCommand extends BaseCommand
     {
         $this->title('PHP Lines of Code');
 
-        $this->exec(['./vendor/bin/phploc', './src']);
+        $this->exec(['./vendor/bin/phploc', $this->projectDirectory()]);
     }
 }

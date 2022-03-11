@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
+use Illuminate\Support\Str;
+
 class MessDetectorCommand extends BaseCommand
 {
     /**
@@ -25,8 +27,12 @@ class MessDetectorCommand extends BaseCommand
      */
     public function handle(): void
     {
+        if (! file_exists(getcwd() . '/phpmd.xml')) {
+            $this->call(MessDetectorCopyConfigurationCommand::class);
+        }
+
         $this->title('PHP Mess Detector');
 
-        $this->exec(['./vendor/bin/phpmd', './src', 'ansi', 'codesize,controversial,design']);
+        $this->exec(['./vendor/bin/phpmd', $this->projectDirectory(), 'ansi']);
     }
 }

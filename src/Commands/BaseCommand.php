@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
+use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Process\Process;
@@ -65,5 +66,29 @@ abstract class BaseCommand extends Command
     protected function vendorPath(): string
     {
         return getcwd() . '/vendor';
+    }
+
+    /**
+     * Returns the qualified project directory path.
+     */
+    protected function projectDirectory(): string
+    {
+        return Str::start(config('app.root'), './');
+    }
+
+    /**
+     * Copies a configuration file from this project into the calling projects root
+     * when the command is executed.
+     */
+    protected function copyFileToProject(string $file): int
+    {
+        $base = sprintf('%s/%s', dirname(__DIR__, 2), $file);
+        $destination = sprintf('%s/%s', getcwd(), $file);
+
+        if ($base === $destination) {
+            return 0;
+        }
+
+        return $this->exec(['cp', '-f', $base, $destination]);
     }
 }

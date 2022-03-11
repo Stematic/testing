@@ -35,7 +35,7 @@ class CodeSnifferCommand extends BaseCommand
             [
                 './vendor/bin/phpcs',
                 '--standard=' . $override,
-                'src',
+                $this->projectDirectory(),
                 '-s',
             ],
         );

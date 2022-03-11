@@ -51,4 +51,15 @@ return [
     |
     */
     'providers' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Root Directory
+    |--------------------------------------------------------------------------
+    |
+    | The root directory that the tests should be performed on (this is the location
+    | of your application code). Default "src".
+    |
+    */
+    'root' => env('ROOT_DIRECTORY', 'src'),
 ];

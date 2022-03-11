@@ -29,16 +29,11 @@ class PhpStanCopyConfigurationCommand extends BaseCommand
      */
     public function handle(): int
     {
-        $base = dirname(__DIR__, 2) . '/phpstan.neon';
-        $destination = getcwd() . '/phpstan.neon';
+        $file = 'phpstan.neon';
 
-        if ($base === $destination) {
-            return 0;
-        }
+        $code = $this->copyFileToProject($file);
 
-        $code = $this->exec(['cp', '-f', $base, $destination]);
-
-        $this->line(sprintf('Copying PHPStan configuration: <fg=green>%s</>', $destination));
+        $this->line(sprintf('Copying PHPStan configuration: <fg=green>%s/%s</>', getcwd(), $file));
 
         return $code;
     }
