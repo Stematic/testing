@@ -7,7 +7,7 @@ namespace Stematic\Testing\Commands;
 use function file_exists;
 use function getcwd;
 
-class PhpStanAnalyseCommand extends AbstractBaseCommand
+class PhpStanAnalyseCommand extends BaseCommand
 {
     /**
      * The command signature.

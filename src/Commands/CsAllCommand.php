@@ -6,7 +6,7 @@ namespace Stematic\Testing\Commands;
 
 use function array_reduce;
 
-class CsAllCommand extends AbstractBaseCommand
+class CsAllCommand extends BaseCommand
 {
     /**
      * The command signature.

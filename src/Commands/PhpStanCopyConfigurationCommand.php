@@ -8,7 +8,7 @@ use function dirname;
 use function sprintf;
 use function getcwd;
 
-class PhpStanCopyConfigurationCommand extends AbstractBaseCommand
+class PhpStanCopyConfigurationCommand extends BaseCommand
 {
     /**
      * The command signature.

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
-class LinesOfCodeCommand extends AbstractBaseCommand
+class LinesOfCodeCommand extends BaseCommand
 {
     /**
      * The command signature.

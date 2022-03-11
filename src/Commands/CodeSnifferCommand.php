@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Stematic\Testing\Commands;
 
 use function dirname;
-use function sprintf;
 
-class CodeSnifferCommand extends AbstractBaseCommand
+class CodeSnifferCommand extends BaseCommand
 {
     /**
      * The command signature.
@@ -31,15 +30,14 @@ class CodeSnifferCommand extends AbstractBaseCommand
         $this->title('PHPCS: Code Sniffer');
 
         $override = dirname(__DIR__, 2) . '/ruleset.xml';
-        $ruleset = sprintf('%s/stematic/coding-standards/ruleset.xml,%s', $this->vendorPath(), $override);
 
         $this->exec(
             [
                 './vendor/bin/phpcs',
-                '--standard=' . $ruleset,
+                '--standard=' . $override,
                 'src',
                 '-s',
-            ]
+            ],
         );
     }
 }

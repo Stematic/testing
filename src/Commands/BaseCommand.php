@@ -8,12 +8,11 @@ use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Process\Process;
 
-use function func_get_args;
 use function str_repeat;
 use function sprintf;
 use function getcwd;
 
-abstract class AbstractBaseCommand extends Command
+abstract class BaseCommand extends Command
 {
     /**
      * Run a shell command with real time output.
@@ -26,14 +25,15 @@ abstract class AbstractBaseCommand extends Command
         ?string $cwd = null,
         ?array $env = null,
         mixed $input = null,
-        ?float $timeout = 60
+        ?float $timeout = 60,
     ): int {
-        $process = new Process(...func_get_args());
+        $process = new Process($command, $cwd, $env, $input, $timeout);
 
         if (Process::isTtySupported()) {
             $process->setTty(true);
         }
 
+        /** @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter */
         $process->run(fn (string $type, string $buffer) => $this->output->write($buffer));
 
         return (int) $process->getExitCode();

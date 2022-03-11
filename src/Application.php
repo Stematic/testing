@@ -19,6 +19,6 @@ class Application extends BaseApplication
     {
         $appPath = $this->appPath ?: $this->basePath . DIRECTORY_SEPARATOR . 'src';
 
-        return $appPath . (! empty($path) ? DIRECTORY_SEPARATOR . $path : '');
+        return $appPath . ($path !== '' ? DIRECTORY_SEPARATOR . $path : '');
     }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
-class MessDetectorCommand extends AbstractBaseCommand
+class MessDetectorCommand extends BaseCommand
 {
     /**
      * The command signature.
