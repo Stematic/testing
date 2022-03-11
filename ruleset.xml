@@ -229,8 +229,6 @@
     <!-- bad practice, if you need a reference convert it to a DTO and update that -->
     <rule ref="SlevomatCodingStandard.PHP.DisallowReference" />
 
-    <rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion" />
-
     <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
         <properties>
             <property name="ignoreComplexTernaryConditions" value="false" />
