@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
+use function getcwd;
 use function sprintf;
 
 class MessDetectorCopyConfigurationCommand extends BaseCommand

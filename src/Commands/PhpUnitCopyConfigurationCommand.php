@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
-use function dirname;
 use function sprintf;
 use function getcwd;
 

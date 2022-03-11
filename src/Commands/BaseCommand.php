@@ -9,6 +9,7 @@ use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Process\Process;
 
+use function dirname;
 use function str_repeat;
 use function sprintf;
 use function getcwd;

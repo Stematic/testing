@@ -39,7 +39,7 @@ class PhpUnitCommand extends BaseCommand
             '--coverage-text',
             '--coverage-filter=' . $this->projectDirectory(),
             '--testdox',
-            '--stop-on-failure'
+            '--stop-on-failure',
         ]);
     }
 }

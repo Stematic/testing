@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
-use Illuminate\Support\Str;
+use function file_exists;
+use function getcwd;
 
 class MessDetectorCommand extends BaseCommand
 {
