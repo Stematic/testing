@@ -53,7 +53,6 @@
 
     <rule ref="WebimpressCodingStandard.PHP.ImportInternalFunction" />
     <rule ref="WebimpressCodingStandard.PHP.ImportInternalConstant" />
-    <rule ref="WebimpressCodingStandard.PHP.DisallowFqn" />
     <rule ref="WebimpressCodingStandard.PHP.DisallowCurlyOffsetAccessBrace" />
     <rule ref="WebimpressCodingStandard.PHP.RedundantSemicolon" />
 
@@ -65,6 +64,7 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions" />
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall" />
         <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
@@ -73,6 +73,10 @@
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration" />
         <exclude name="SlevomatCodingStandard.Functions.RequireArrowFunction" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation" />
+        <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLineDocComment" />
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
