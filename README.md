@@ -1,4 +1,4 @@
-<p align="center"><a href="https://www.stematic.co.uk/" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Stematic/testing/develop/art/stematic-testing-banner.png" width="426"></a></p>
+<p align="center"><a href="https://www.stematic.co.uk/" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Stematic/testing/develop/art/stematic-testing-banner.png" width="276"></a></p>
 
 ## About Stematic Testing
 
