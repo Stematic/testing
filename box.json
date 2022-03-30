@@ -8,11 +8,14 @@
         "vendor"
     ],
     "files": [
-        "composer.json"
+        "composer.json",
+        "ruleset.xml",
+        "phpmd.xml",
+        "phpstan.neon",
+        "phpunit.xml"
     ],
     "exclude-composer-files": false,
     "exclude-dev-files": false,
-    "compression": "GZ",
     "compactors": [
         "KevinGH\\Box\\Compactor\\Php",
         "KevinGH\\Box\\Compactor\\Json"

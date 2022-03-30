@@ -76,7 +76,7 @@ abstract class BaseCommand extends Command
      */
     protected function projectDirectory(): string
     {
-        return Str::start(config('app.root'), sprintf('%s%s', dirname(__DIR__, 2), DIRECTORY_SEPARATOR));
+        return Str::start(config('app.root'), sprintf('%s%s', $_SERVER['PWD'], DIRECTORY_SEPARATOR));
     }
 
     /**
@@ -85,13 +85,15 @@ abstract class BaseCommand extends Command
      */
     protected function copyFileToProject(string $file): int
     {
-        $base = sprintf('%s%s%s', dirname(__DIR__, 2), DIRECTORY_SEPARATOR, $file);
+        $base = sprintf('%s%s%s', base_path(), DIRECTORY_SEPARATOR, $file);
         $destination = sprintf('%s%s%s', getcwd(), DIRECTORY_SEPARATOR, $file);
 
         if ($base === $destination) {
             return 0;
         }
 
-        return $this->exec(['cp', '-f', $base, $destination]);
+        $source = file_get_contents($base);
+
+        return file_put_contents($destination, $source);
     }
 }
