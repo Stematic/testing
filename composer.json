@@ -11,12 +11,12 @@
         "phploc/phploc": "^7.0",
         "slevomat/coding-standard": "^7.0.19",
         "webimpress/coding-standard": "^1.2.4",
-        "laravel-zero/phar-updater": "^1.2"
+        "laravel-zero/phar-updater": "^1.2",
+        "nunomaduro/larastan": "^2.0"
     },
     "require-dev": {
         "laravel-zero/framework": "^9.0",
         "spatie/laravel-ignition": "^1.0.4",
-        "nunomaduro/larastan": "^2.0",
         "orchestra/testbench": "^v7.0.0",
         "nunomaduro/collision": "^6.1",
         "nunomaduro/patrol": "^1.1",
@@ -29,9 +29,6 @@
         "psr-4": {
             "Stematic\\Testing\\": "src/"
         }
-    },
-    "scripts": {
-        "testing": "./testing"
     },
     "bin": ["builds/testing"],
     "minimum-stability": "dev",
