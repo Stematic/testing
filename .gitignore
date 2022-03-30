@@ -6,3 +6,4 @@ coverage
 .phpunit.result.cache
 bootstrap/cache/commands.php
 bootstrap/cache/namespaces.php
+storage/logs/*

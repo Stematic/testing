@@ -38,7 +38,7 @@ return [
     | the global command line "--env" option when calling commands.
     |
     */
-    'env' => 'production',
+    'env' => 'debug',
 
     /*
     |--------------------------------------------------------------------------
