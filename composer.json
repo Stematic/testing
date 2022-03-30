@@ -10,7 +10,8 @@
         "phpmd/phpmd": "^2.10",
         "phploc/phploc": "^7.0",
         "slevomat/coding-standard": "^7.0.19",
-        "webimpress/coding-standard": "^1.2.4"
+        "webimpress/coding-standard": "^1.2.4",
+        "laravel-zero/phar-updater": "^1.2"
     },
     "require-dev": {
         "laravel-zero/framework": "^9.0",

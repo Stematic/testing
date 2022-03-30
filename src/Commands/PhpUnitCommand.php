@@ -6,6 +6,10 @@ namespace Stematic\Testing\Commands;
 
 use function file_exists;
 use function getcwd;
+use function sprintf;
+use function implode;
+
+use const DIRECTORY_SEPARATOR;
 
 class PhpUnitCommand extends BaseCommand
 {
@@ -28,14 +32,14 @@ class PhpUnitCommand extends BaseCommand
      */
     public function handle(): void
     {
-        if (! file_exists(getcwd() . '/phpunit.xml')) {
+        if (! file_exists(sprintf('%s%sphpunit.xml', getcwd(), DIRECTORY_SEPARATOR))) {
             $this->call(PhpUnitCopyConfigurationCommand::class);
         }
 
         $this->title('PHPUnit: Application Test Suite');
 
         $this->exec([
-            './vendor/bin/phpunit',
+            implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
             '--coverage-text',
             '--coverage-filter=' . $this->projectDirectory(),
             '--testdox',

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
-use function dirname;
+use function sprintf;
+use function implode;
+
+use const DIRECTORY_SEPARATOR;
 
 class CodeSnifferCommand extends BaseCommand
 {
@@ -29,11 +32,11 @@ class CodeSnifferCommand extends BaseCommand
     {
         $this->title('PHPCS: Code Sniffer');
 
-        $override = dirname(__DIR__, 2) . '/ruleset.xml';
+        $override = sprintf('%s%sruleset.xml', base_path(), DIRECTORY_SEPARATOR);
 
         $this->exec(
             [
-                './vendor/bin/phpcs',
+                implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpcs']),
                 '--standard=' . $override,
                 $this->projectDirectory(),
                 '-s',

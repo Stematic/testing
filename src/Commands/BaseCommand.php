@@ -14,6 +14,8 @@ use function str_repeat;
 use function sprintf;
 use function getcwd;
 
+use const DIRECTORY_SEPARATOR;
+
 abstract class BaseCommand extends Command
 {
     /**
@@ -66,7 +68,7 @@ abstract class BaseCommand extends Command
      */
     protected function vendorPath(): string
     {
-        return getcwd() . '/vendor';
+        return sprintf('%s%svendor', getcwd(), DIRECTORY_SEPARATOR);
     }
 
     /**
@@ -74,7 +76,7 @@ abstract class BaseCommand extends Command
      */
     protected function projectDirectory(): string
     {
-        return Str::start(config('app.root'), './');
+        return Str::start(config('app.root'), sprintf('%s%s', base_path(), DIRECTORY_SEPARATOR));
     }
 
     /**
@@ -83,8 +85,8 @@ abstract class BaseCommand extends Command
      */
     protected function copyFileToProject(string $file): int
     {
-        $base = sprintf('%s/%s', dirname(__DIR__, 2), $file);
-        $destination = sprintf('%s/%s', getcwd(), $file);
+        $base = sprintf('%s%s%s', dirname(__DIR__, 2), DIRECTORY_SEPARATOR, $file);
+        $destination = sprintf('%s%s%s', getcwd(), DIRECTORY_SEPARATOR, $file);
 
         if ($base === $destination) {
             return 0;

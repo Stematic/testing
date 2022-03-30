@@ -6,6 +6,10 @@ namespace Stematic\Testing\Commands;
 
 use function file_exists;
 use function getcwd;
+use function sprintf;
+use function implode;
+
+use const DIRECTORY_SEPARATOR;
 
 class MessDetectorCommand extends BaseCommand
 {
@@ -28,12 +32,16 @@ class MessDetectorCommand extends BaseCommand
      */
     public function handle(): void
     {
-        if (! file_exists(getcwd() . '/phpmd.xml')) {
+        if (! file_exists(sprintf('%s%sphpmd.xml', getcwd(), DIRECTORY_SEPARATOR))) {
             $this->call(MessDetectorCopyConfigurationCommand::class);
         }
 
         $this->title('PHP Mess Detector');
 
-        $this->exec(['./vendor/bin/phpmd', $this->projectDirectory(), 'ansi']);
+        $this->exec([
+            implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpmd']),
+            $this->projectDirectory(),
+            'ansi',
+        ]);
     }
 }

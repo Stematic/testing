@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Stematic\Testing\Commands;
 
+use function implode;
+
+use const DIRECTORY_SEPARATOR;
+
 class LinesOfCodeCommand extends BaseCommand
 {
     /**
@@ -27,6 +31,9 @@ class LinesOfCodeCommand extends BaseCommand
     {
         $this->title('PHP Lines of Code');
 
-        $this->exec(['./vendor/bin/phploc', $this->projectDirectory()]);
+        $this->exec([
+            implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phploc']),
+            $this->projectDirectory(),
+        ]);
     }
 }
