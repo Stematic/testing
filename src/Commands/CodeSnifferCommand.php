@@ -32,16 +32,13 @@ class CodeSnifferCommand extends BaseCommand
     {
         $this->title('PHPCS: Code Sniffer');
 
-        $ruleset = sprintf('%s%sruleset.xml', getcwd(), DIRECTORY_SEPARATOR);
-
-        if (! file_exists($ruleset)) {
-            $this->call(CodeSnifferCopyConfigurationCommand::class);
-        }
+        // Always copy the ruleset before running (prevents abuse).
+        $this->call(CodeSnifferCopyConfigurationCommand::class);
 
         $this->exec(
             [
                 implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpcs']),
-                '--standard=' . $ruleset,
+                sprintf('--standard=%s%sruleset.xml', getcwd(), DIRECTORY_SEPARATOR),
                 $this->projectDirectory(),
                 '-s',
             ],

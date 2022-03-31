@@ -79,6 +79,8 @@
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint" />
         <exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion" />
         <exclude name="SlevomatCodingStandard.Classes.RequireAbstractOrFinal.ClassNeitherAbstractNorFinal" />
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
+        <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
