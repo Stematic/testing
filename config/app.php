@@ -50,7 +50,9 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-    'providers' => [],
+    'providers' => [
+        Stematic\Testing\Providers\AppServiceProvider::class
+    ],
 
     /*
     |--------------------------------------------------------------------------

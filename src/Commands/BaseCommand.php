@@ -9,10 +9,11 @@ use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Process\Process;
 
-use function dirname;
 use function str_repeat;
 use function sprintf;
 use function getcwd;
+use function file_put_contents;
+use function file_get_contents;
 
 use const DIRECTORY_SEPARATOR;
 
@@ -76,7 +77,10 @@ abstract class BaseCommand extends Command
      */
     protected function projectDirectory(): string
     {
-        return Str::start(config('app.root'), sprintf('%s%s', $_SERVER['PWD'], DIRECTORY_SEPARATOR));
+        // @phpcs:ignore
+        $pwd = $_SERVER['PWD'];
+
+        return Str::start(config('app.root'), sprintf('%s%s', $pwd, DIRECTORY_SEPARATOR));
     }
 
     /**

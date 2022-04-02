@@ -6,6 +6,7 @@ namespace Stematic\Testing\Commands;
 
 use function sprintf;
 use function implode;
+use function getcwd;
 
 use const DIRECTORY_SEPARATOR;
 

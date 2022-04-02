@@ -8,6 +8,7 @@ use function file_exists;
 use function getcwd;
 use function sprintf;
 use function implode;
+use function array_filter;
 
 use const DIRECTORY_SEPARATOR;
 
@@ -18,7 +19,7 @@ class PhpUnitCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'test';
+    protected $signature = 'test {--F|filter=}';
 
     /**
      * The command description.
@@ -38,12 +39,15 @@ class PhpUnitCommand extends BaseCommand
 
         $this->title('PHPUnit: Application Test Suite');
 
-        $this->exec([
+        $filter = $this->option('filter');
+
+        $this->exec(array_filter([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
+            $filter !== null ? sprintf('--filter=%s', $filter) : null,
             '--coverage-text',
             '--coverage-filter=' . $this->projectDirectory(),
             '--testdox',
             '--stop-on-failure',
-        ]);
+        ]));
     }
 }
