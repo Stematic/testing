@@ -371,7 +371,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
             <property name="allowSingleLineYieldStacking" value="true" />
-            <property name="linesCountBefore" value="0" />
+            <property name="linesCountBefore" value="1" />
             <property name="linesCountBeforeFirst" value="0" />
             <property name="linesCountAfter" value="0" />
             <property name="linesCountAfterLast" value="0" />
