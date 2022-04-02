@@ -53,13 +53,7 @@
 
     <rule ref="WebimpressCodingStandard.PHP.ImportInternalFunction" />
     <rule ref="WebimpressCodingStandard.PHP.ImportInternalConstant" />
-    <rule ref="WebimpressCodingStandard.PHP.DisallowCurlyOffsetAccessBrace" />
     <rule ref="WebimpressCodingStandard.PHP.RedundantSemicolon" />
-
-    <rule ref="WebimpressCodingStandard">
-        <!-- fix for 8.1 enums -->
-        <exclude name="WebimpressCodingStandard.PHP.DisallowCurlyOffsetAccessBrace.Invalid" />
-    </rule>
 
     <rule ref="SlevomatCodingStandard">
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint" />
