@@ -82,6 +82,7 @@
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
         <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty" />
         <exclude name="SlevomatCodingStandard.Namespaces.UnusedUses.UnusedUse" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
