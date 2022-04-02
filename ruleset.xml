@@ -56,6 +56,11 @@
     <rule ref="WebimpressCodingStandard.PHP.DisallowCurlyOffsetAccessBrace" />
     <rule ref="WebimpressCodingStandard.PHP.RedundantSemicolon" />
 
+    <rule ref="WebimpressCodingStandard">
+        <!-- fix for 8.1 enums -->
+        <exclude name="WebimpressCodingStandard.PHP.DisallowCurlyOffsetAccessBrace.Invalid" />
+    </rule>
+
     <rule ref="SlevomatCodingStandard">
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint" />
@@ -81,6 +86,7 @@
         <exclude name="SlevomatCodingStandard.Classes.RequireAbstractOrFinal.ClassNeitherAbstractNorFinal" />
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
         <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty" />
+        <exclude name="SlevomatCodingStandard.Namespaces.UnusedUses.UnusedUse" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
@@ -370,7 +376,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
             <property name="allowSingleLineYieldStacking" value="true" />
-            <property name="linesCountBefore" value="1" />
+            <property name="linesCountBefore" value="0" />
             <property name="linesCountBeforeFirst" value="0" />
             <property name="linesCountAfter" value="0" />
             <property name="linesCountAfterLast" value="0" />
