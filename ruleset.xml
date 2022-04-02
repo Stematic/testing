@@ -350,7 +350,7 @@
 
     <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
         <properties>
-            <property name="linesCountBeforeFirstUse" value="0" />
+            <property name="linesCountBeforeFirstUse" value="1" />
             <property name="linesCountBeforeFirstUseWhenFirstInClass" value="0" />
             <property name="linesCountBetweenUses" value="0" />
             <property name="linesCountAfterLastUse" value="1" />
@@ -360,9 +360,9 @@
 
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
         <properties>
-            <property name="linesCountBefore" value="0" />
+            <property name="linesCountBefore" value="1" />
             <property name="linesCountBeforeFirst" value="1" />
-            <property name="linesCountAfter" value="0" />
+            <property name="linesCountAfter" value="1" />
             <property name="linesCountAfterLast" value="0" />
         </properties>
     </rule>
@@ -370,7 +370,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
         <properties>
             <property name="allowSingleLineYieldStacking" value="true" />
-            <property name="linesCountBefore" value="1" />
+            <property name="linesCountBefore" value="0" />
             <property name="linesCountBeforeFirst" value="0" />
             <property name="linesCountAfter" value="0" />
             <property name="linesCountAfterLast" value="0" />
