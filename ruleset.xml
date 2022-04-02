@@ -361,7 +361,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
         <properties>
             <property name="linesCountBefore" value="0" />
-            <property name="linesCountBeforeFirst" value="0" />
+            <property name="linesCountBeforeFirst" value="1" />
             <property name="linesCountAfter" value="0" />
             <property name="linesCountAfterLast" value="0" />
         </properties>
@@ -473,7 +473,7 @@
 
     <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
         <properties>
-            <property name="linesCountBeforeFirstUse" value="1" />
+            <property name="linesCountBeforeFirstUse" value="0" />
             <property name="linesCountBetweenUseTypes" value="1" />
             <property name="linesCountAfterLastUse" value="1" />
         </properties>
