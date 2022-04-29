@@ -445,7 +445,7 @@
 
     <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall">
         <properties>
-            <property name="maxLineLength" value="120" />
+            <property name="maxLineLength" value="80" />
             <property name="ignoreWithComplexParameter" value="true" />
         </properties>
     </rule>

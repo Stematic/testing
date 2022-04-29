@@ -25,7 +25,7 @@ return [
     | number MAJOR.MINOR.PATCH when an update happens: https://semver.org.
     |
     */
-    'version' => '1.0.0',
+    'version' => '1.0.1',
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
     'providers' => [
-        Stematic\Testing\Providers\AppServiceProvider::class
+        Stematic\Testing\Providers\AppServiceProvider::class,
     ],
 
     /*

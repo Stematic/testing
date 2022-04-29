@@ -3,6 +3,12 @@ includes:
 
 parameters:
     paths:
-        - src
+        - ./
+    excludePaths:
+        - ./art
+        - ./builds
+        - ./resources
+        - ./storage
+        - ./vendor
     level: 5
     checkGenericClassInNonGenericObjectType: false

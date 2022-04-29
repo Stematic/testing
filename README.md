@@ -12,6 +12,12 @@ Add the testing module to your develop dependencies in your package / Laravel ap
 composer require --dev stematic/testing
 ```
 
+Alternatively, you can add it as a global package as a binary is provided `testing`.
+
+```shell
+composer global require stematic/testing
+```
+
 ## Usage
 
 ```shell

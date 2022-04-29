@@ -42,6 +42,8 @@ class MessDetectorCommand extends BaseCommand
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpmd']),
             $this->projectDirectory(),
             'ansi',
+            'phpmd.xml',
+            '--suffixes=php',
         ]);
     }
 }

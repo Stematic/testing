@@ -41,6 +41,7 @@ class CodeSnifferCommand extends BaseCommand
                 implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpcs']),
                 sprintf('--standard=%s%sruleset.xml', getcwd(), DIRECTORY_SEPARATOR),
                 $this->projectDirectory(),
+                sprintf('--ignore=%s', './vendor,./storage,./resources,./builds'),
                 '-s',
             ],
         );

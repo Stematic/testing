@@ -19,7 +19,7 @@ class PhpUnitCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'test {--F|filter=}';
+    protected $signature = 'test {--F|filter=} {--C|coverage=text}';
 
     /**
      * The command description.
@@ -40,12 +40,13 @@ class PhpUnitCommand extends BaseCommand
         $this->title('PHPUnit: Application Test Suite');
 
         $filter = $this->option('filter');
+        $coverage = $this->option('coverage');
 
         $this->exec(array_filter([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
             $filter !== null ? sprintf('--filter=%s', $filter) : null,
-            '--coverage-text',
-            '--coverage-filter=' . $this->projectDirectory(),
+            '--coverage-' . $coverage,
+            '--coverage-filter=' . $this->projectDirectory() . 'app,' . $this->projectDirectory() . 'src',
             '--testdox',
             '--stop-on-failure',
         ]));

@@ -38,6 +38,10 @@ abstract class BaseCommand extends Command
             $process->setTty(true);
         }
 
+        $this->newLine();
+        $this->comment($process->getCommandLine());
+        $this->newLine();
+
         /** @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter */
         $process->run(fn (string $type, string $buffer) => $this->output->write($buffer));
 
@@ -80,7 +84,7 @@ abstract class BaseCommand extends Command
         // @phpcs:ignore
         $pwd = $_SERVER['PWD'];
 
-        return Str::start(config('app.root'), sprintf('%s%s', $pwd, DIRECTORY_SEPARATOR));
+        return sprintf('%s%s', $pwd, DIRECTORY_SEPARATOR);
     }
 
     /**
