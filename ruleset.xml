@@ -84,6 +84,7 @@
         <exclude name="SlevomatCodingStandard.Namespaces.UnusedUses.UnusedUse" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
+        <exclude name="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
