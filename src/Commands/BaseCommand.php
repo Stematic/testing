@@ -79,12 +79,16 @@ abstract class BaseCommand extends Command
     /**
      * Returns the qualified project directory path.
      */
-    protected function projectDirectory(): string
+    protected function projectDirectory($directory = null): string
     {
         // @phpcs:ignore
         $pwd = $_SERVER['PWD'];
 
-        return sprintf('%s%s', $pwd, DIRECTORY_SEPARATOR);
+        $suffix = $directory !== null
+            ? Str::finish($directory, DIRECTORY_SEPARATOR)
+            : '';
+
+        return sprintf('%s%s%s', $pwd, DIRECTORY_SEPARATOR, $suffix);
     }
 
     /**

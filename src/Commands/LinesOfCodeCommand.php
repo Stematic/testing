@@ -34,10 +34,10 @@ class LinesOfCodeCommand extends BaseCommand
         $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phploc']),
             $this->projectDirectory(),
-            '--exclude=./vendor',
-            '--exclude=./builds',
-            '--exclude=./resources',
-            '--exclude=./storage',
+            sprintf('--exclude=%s', $this->projectDirectory('vendor')),
+            sprintf('--exclude=%s', $this->projectDirectory('builds')),
+            sprintf('--exclude=%s', $this->projectDirectory('resources')),
+            sprintf('--exclude=%s', $this->projectDirectory('storage')),
         ]);
     }
 }

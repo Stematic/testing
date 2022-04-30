@@ -85,6 +85,7 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
         <exclude name="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator" />
+        <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
@@ -219,8 +220,6 @@
     <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator" />
 
     <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
-
-    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter" />
 
     <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
 
@@ -445,7 +444,7 @@
 
     <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall">
         <properties>
-            <property name="maxLineLength" value="80" />
+            <property name="maxLineLength" value="120" />
             <property name="ignoreWithComplexParameter" value="true" />
         </properties>
     </rule>
