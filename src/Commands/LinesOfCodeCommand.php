@@ -34,10 +34,19 @@ class LinesOfCodeCommand extends BaseCommand
         $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phploc']),
             $this->projectDirectory(),
-            sprintf('--exclude=%s', $this->projectDirectory('vendor')),
-            sprintf('--exclude=%s', $this->projectDirectory('builds')),
-            sprintf('--exclude=%s', $this->projectDirectory('resources')),
-            sprintf('--exclude=%s', $this->projectDirectory('storage')),
+            ... $this->getDirectoryExclusions(),
         ]);
+    }
+
+    /**
+     * Returns a list of exclusion parameters.
+     *
+     * @return array<array-key, string>
+     */
+    protected function getDirectoryExclusions(): array
+    {
+        return collect(['vendor', 'builds', 'resources', 'storage'])
+            ->map(fn (string $directory): string => sprintf('--exclude=%s', $this->projectDirectory($directory)))
+            ->toArray();
     }
 }
