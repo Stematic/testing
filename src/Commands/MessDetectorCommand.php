@@ -44,6 +44,19 @@ class MessDetectorCommand extends BaseCommand
             'ansi',
             'phpmd.xml',
             '--suffixes=php',
+            sprintf('--exclude=%s', implode(',', $this->getDirectoryExclusions())),
         ]);
+    }
+
+    /**
+     * Returns a list of exclusion parameters.
+     *
+     * @return array<array-key, string>
+     */
+    protected function getDirectoryExclusions(): array
+    {
+        return collect(['vendor', 'builds', 'resources', 'storage'])
+            ->map(fn (string $directory): string => sprintf('%s*', $this->projectDirectory($directory)))
+            ->toArray();
     }
 }
