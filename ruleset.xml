@@ -83,6 +83,7 @@
         <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty" />
         <exclude name="SlevomatCodingStandard.Namespaces.UnusedUses.UnusedUse" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
@@ -387,8 +388,6 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses" />
 
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator" />
-
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
 
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition">
         <properties>
