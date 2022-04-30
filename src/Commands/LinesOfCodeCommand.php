@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Stematic\Testing\Commands;
 
 use function implode;
+use function sprintf;
 
 use const DIRECTORY_SEPARATOR;
 

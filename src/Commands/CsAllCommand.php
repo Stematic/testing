@@ -29,6 +29,7 @@ class CsAllCommand extends BaseCommand
     {
         $commands = [
             LinesOfCodeCommand::class,
+            PhpCpdCommand::class,
             CodeSnifferCommand::class,
             PhpStanAnalyseCommand::class,
         ];

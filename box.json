@@ -10,7 +10,6 @@
     "files": [
         "composer.json",
         "ruleset.xml",
-        "phpmd.xml",
         "phpstan.neon",
         "phpunit.xml"
     ],
