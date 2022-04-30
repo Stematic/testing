@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        config(['logging.channels.single.path' => Phar::running()
+        config(['logging.channels.default.path' => Phar::running() !== ''
             ? dirname(Phar::running(false)) . '/testing.log'
             : storage_path('logs/testing.log'),
         ]);
