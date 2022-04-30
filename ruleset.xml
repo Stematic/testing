@@ -86,6 +86,8 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
         <exclude name="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
+        <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch" />
+        <exclude name="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch.NonCapturingCatchRequired" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
@@ -125,12 +127,6 @@
     </rule>
 
     <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
-
-    <rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch">
-        <properties>
-            <property name="enable" value="true" />
-        </properties>
-    </rule>
 
     <!-- Allow "declare(strict_types=1)" with a single line after the opening php tag -->
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
