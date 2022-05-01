@@ -19,6 +19,10 @@
         includeUncoveredFiles="true"
         processUncoveredFiles="true"
     >
+        <include>
+            <directory suffix="php">src</directory>
+            <directory suffix="php">app</directory>
+        </include>
         <report>
             <clover outputFile="coverage/coverage-clover.xml"/>
             <html
@@ -31,13 +35,6 @@
                 showUncoveredFiles="true"
             />
         </report>
-        <exclude>
-            <directory>vendor</directory>
-            <directory>tests</directory>
-            <directory>builds</directory>
-            <directory>resources</directory>
-            <directory>storage</directory>
-        </exclude>
     </coverage>
     <testsuites>
         <testsuite name="Laravel Test Suite">
