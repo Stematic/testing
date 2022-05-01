@@ -46,7 +46,7 @@ class LinesOfCodeCommand extends BaseCommand
      */
     protected function getDirectoryExclusions(): array
     {
-        return collect(['vendor', 'builds', 'resources', 'storage'])
+        return collect(['coverage', 'vendor', 'builds', 'resources', 'storage'])
             ->map(fn (string $directory): string => sprintf('--exclude=%s', $this->projectDirectory($directory)))
             ->toArray();
     }

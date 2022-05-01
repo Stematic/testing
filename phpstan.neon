@@ -10,5 +10,6 @@ parameters:
         - ./resources
         - ./storage
         - ./vendor
+        - ./coverage
     level: 5
     checkGenericClassInNonGenericObjectType: false
