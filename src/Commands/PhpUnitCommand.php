@@ -46,7 +46,6 @@ class PhpUnitCommand extends BaseCommand
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
             $filter !== null ? sprintf('--filter=%s', $filter) : null,
             '--coverage-' . $coverage,
-            '--coverage-filter=' . $this->projectDirectory() . 'app,' . $this->projectDirectory() . 'src',
             '--testdox',
             '--stop-on-failure',
         ]));

@@ -31,6 +31,13 @@
                 showUncoveredFiles="true"
             />
         </report>
+        <exclude>
+            <directory>vendor</directory>
+            <directory>tests</directory>
+            <directory>builds</directory>
+            <directory>resources</directory>
+            <directory>storage</directory>
+        </exclude>
     </coverage>
     <testsuites>
         <testsuite name="Laravel Test Suite">
