@@ -1,0 +1,23 @@
+{
+    "chmod": "0755",
+    "directories": [
+        "src",
+        "bootstrap",
+        "resources",
+        "config",
+        "vendor"
+    ],
+    "files": [
+        "composer.json",
+        "ruleset.xml",
+        "phpstan.neon",
+        "phpunit.xml"
+    ],
+    "exclude-composer-files": false,
+    "exclude-dev-files": false,
+    "compression": "GZ",
+    "compactors": [
+        "KevinGH\\Box\\Compactor\\Php",
+        "KevinGH\\Box\\Compactor\\Json"
+    ]
+}
