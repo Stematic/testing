@@ -19,7 +19,7 @@ class PhpUnitCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'test {--F|filter=} {--C|coverage=text}';
+    protected $signature = 'test {--F|filter=} {--C|coverage=text} {--output-dir=coverage}';
 
     /**
      * The command description.
@@ -41,13 +41,15 @@ class PhpUnitCommand extends BaseCommand
 
         $filter = $this->option('filter');
         $coverage = $this->option('coverage');
+        $outputDir = $this->option('output-dir');
 
         $this->exec(array_filter([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
             $filter !== null ? sprintf('--filter=%s', $filter) : null,
-            '--coverage-' . $coverage,
             '--testdox',
             '--stop-on-failure',
+            '--coverage-' . $coverage,
+            $outputDir,
         ]));
     }
 }
