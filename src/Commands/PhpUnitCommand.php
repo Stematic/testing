@@ -49,7 +49,9 @@ class PhpUnitCommand extends BaseCommand
             '--testdox',
             '--stop-on-failure',
             '--coverage-' . $coverage,
-            $outputDir,
+            $coverage === 'html'
+                ? $outputDir
+                : '',
         ]));
     }
 }
