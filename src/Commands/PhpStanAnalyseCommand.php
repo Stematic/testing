@@ -30,7 +30,7 @@ class PhpStanAnalyseCommand extends BaseCommand
     /**
      * Run php code sniffer detection to find coding standards issues.
      */
-    public function handle(): void
+    public function handle(): int
     {
         if (! file_exists(sprintf('%s%sphpstan.neon', getcwd(), DIRECTORY_SEPARATOR))) {
             $this->call(PhpStanCopyConfigurationCommand::class);
@@ -38,7 +38,7 @@ class PhpStanAnalyseCommand extends BaseCommand
 
         $this->title('PHPStan: Static Analysis');
 
-        $this->exec([
+        return $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpstan']),
             'analyse',
             '--memory-limit=2G',

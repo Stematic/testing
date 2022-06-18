@@ -29,14 +29,14 @@ class CodeSnifferCommand extends BaseCommand
     /**
      * Run php code sniffer detection to find coding standards issues.
      */
-    public function handle(): void
+    public function handle(): int
     {
         $this->title('PHPCS: Code Sniffer');
 
         // Always copy the ruleset before running (prevents abuse).
         $this->call(CodeSnifferCopyConfigurationCommand::class);
 
-        $this->exec(
+        return $this->exec(
             [
                 implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpcs']),
                 sprintf('--standard=%s%sruleset.xml', getcwd(), DIRECTORY_SEPARATOR),

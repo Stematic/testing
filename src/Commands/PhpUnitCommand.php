@@ -31,7 +31,7 @@ class PhpUnitCommand extends BaseCommand
     /**
      * Run php code sniffer detection to find coding standards issues.
      */
-    public function handle(): void
+    public function handle(): int
     {
         if (! file_exists(sprintf('%s%sphpunit.xml', getcwd(), DIRECTORY_SEPARATOR))) {
             $this->call(PhpUnitCopyConfigurationCommand::class);
@@ -43,7 +43,7 @@ class PhpUnitCommand extends BaseCommand
         $coverage = $this->option('coverage');
         $outputDir = $this->option('output-dir');
 
-        $this->exec(array_filter([
+        return $this->exec(array_filter([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpunit']),
             $filter !== null ? sprintf('--filter=%s', $filter) : null,
             '--testdox',

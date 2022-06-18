@@ -28,11 +28,11 @@ class LinesOfCodeCommand extends BaseCommand
     /**
      * Run php code sniffer detection to find coding standards issues.
      */
-    public function handle(): void
+    public function handle(): int
     {
         $this->title('PHP Lines of Code');
 
-        $this->exec([
+        return $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phploc']),
             $this->projectDirectory(),
             ... $this->getDirectoryExclusions(),

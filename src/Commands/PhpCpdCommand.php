@@ -30,11 +30,11 @@ class PhpCpdCommand extends BaseCommand
     /**
      * Run php copy/paste detector tool.
      */
-    public function handle(): void
+    public function handle(): int
     {
         $this->title('PHP Copy Paste Detection');
 
-        $this->exec([
+        return $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpcpd']),
             $this->projectDirectory(),
             ... $this->getDirectoryExclusions(),

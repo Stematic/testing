@@ -106,6 +106,6 @@ abstract class BaseCommand extends Command
 
         $source = file_get_contents($base);
 
-        return file_put_contents($destination, $source);
+        return file_put_contents($destination, $source) === false ? 1 : 0;
     }
 }
