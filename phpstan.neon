@@ -11,5 +11,6 @@ parameters:
         - ./storage
         - ./vendor
         - ./coverage
+        - ./node_modules
     level: 5
     checkGenericClassInNonGenericObjectType: false
