@@ -90,6 +90,7 @@
         <exclude name="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch.NonCapturingCatchRequired" />
         <exclude name="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature" />
         <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators" />
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment.MultiLinePropertyComment" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
