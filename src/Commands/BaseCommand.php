@@ -95,12 +95,12 @@ abstract class BaseCommand extends Command
      * Copies a configuration file from this project into the calling projects root
      * when the command is executed.
      */
-    protected function copyFileToProject(string $file): int
+    protected function copyFileToProject(string $file, bool $force = false): int
     {
         $base = sprintf('%s%s%s', base_path(), DIRECTORY_SEPARATOR, $file);
         $destination = sprintf('%s%s%s', getcwd(), DIRECTORY_SEPARATOR, $file);
 
-        if ($base === $destination) {
+        if ($base === $destination || (file_exists($destination) && !$force) {
             return 0;
         }
 
