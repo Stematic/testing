@@ -100,7 +100,7 @@ abstract class BaseCommand extends Command
         $base = sprintf('%s%s%s', base_path(), DIRECTORY_SEPARATOR, $file);
         $destination = sprintf('%s%s%s', getcwd(), DIRECTORY_SEPARATOR, $file);
 
-        if ($base === $destination || (file_exists($destination) && !$force) {
+        if ($base === $destination || (file_exists($destination) && !$force)) {
             return 0;
         }
 
