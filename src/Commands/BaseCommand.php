@@ -14,6 +14,7 @@ use function sprintf;
 use function getcwd;
 use function file_put_contents;
 use function file_get_contents;
+use function file_exists;
 
 use const DIRECTORY_SEPARATOR;
 

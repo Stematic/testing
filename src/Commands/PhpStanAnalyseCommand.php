@@ -18,7 +18,7 @@ class PhpStanAnalyseCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'cs:phpstan  {--X|xdebug}';
+    protected $signature = 'cs:phpstan  {--X|xdebug} {--no-xdebug}';
 
     /**
      * The command description.
@@ -38,7 +38,8 @@ class PhpStanAnalyseCommand extends BaseCommand
 
         $this->title('PHPStan: Static Analysis');
 
-        $xdebug = $this->option('xdebug');
+        $xdebug = ($this->option('xdebug') || phpversion('xdebug'))
+            && ! $this->option('no-xdebug');
 
         return $this->exec([
             implode(DIRECTORY_SEPARATOR, ['.', 'vendor', 'bin', 'phpstan']),
