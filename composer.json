@@ -2,18 +2,18 @@
     "name": "stematic/testing",
     "description": "Testing and coding standards package.",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.2",
         "squizlabs/php_codesniffer": "^3.6",
         "phpunit/phpunit": "^9.5|^10.0",
         "phploc/phploc": "^7.0",
-        "slevomat/coding-standard": "^8.0.0",
-        "webimpress/coding-standard": "^1.2.4"
+        "slevomat/coding-standard": "^8.8.0",
+        "webimpress/coding-standard": "^1.2.4",
+        "nunomaduro/larastan": "^2.4.1"
     },
     "require-dev": {
         "laravel-zero/phar-updater": "^1.2",
-        "nunomaduro/larastan": "^2.0",
         "sebastian/phpcpd": "^6.0",
         "laravel-zero/framework": "^v10.0.0",
         "spatie/laravel-ignition": "^2.0.0",

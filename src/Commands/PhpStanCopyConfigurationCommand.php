@@ -30,7 +30,7 @@ class PhpStanCopyConfigurationCommand extends BaseCommand
     {
         $file = 'phpstan.neon';
 
-        $code = $this->copyFileToProject($file);
+        $code = $this->copyFileToProject($file, true);
 
         $this->line(sprintf('Copying PHPStan configuration: <fg=green>%s/%s</>', getcwd(), $file));
 

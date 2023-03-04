@@ -30,7 +30,7 @@ class PhpUnitCopyConfigurationCommand extends BaseCommand
     {
         $file = 'phpunit.xml';
 
-        $code = $this->copyFileToProject($file);
+        $code = $this->copyFileToProject($file, true);
 
         $this->line(sprintf('Copying PHPUnit configuration: <fg=green>%s/%s</>', getcwd(), $file));
 

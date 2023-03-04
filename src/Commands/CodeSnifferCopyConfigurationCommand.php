@@ -30,7 +30,7 @@ class CodeSnifferCopyConfigurationCommand extends BaseCommand
     {
         $file = 'ruleset.xml';
 
-        $code = $this->copyFileToProject($file);
+        $code = $this->copyFileToProject($file, true);
 
         $this->line(sprintf('Copying PHPCS ruleset file: <fg=green>%s/%s</>', getcwd(), $file));
 
